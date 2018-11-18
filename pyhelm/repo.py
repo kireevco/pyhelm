@@ -1,4 +1,7 @@
-import cStringIO
+try:
+    from cStringIO import StringIO
+except ImportError:
+    from io import BytesIO as StringIO
 import itertools
 import os
 from git import Repo
